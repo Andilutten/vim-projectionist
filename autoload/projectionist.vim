@@ -925,6 +925,9 @@ function! projectionist#apply_template() abort
   if type(template) == type([])
     let l:.template = join(template, "\n")
   endif
+  if type(template) == type('') && filereadable(template)
+    let template = join(readfile(template), "\n")
+  endif
   if !empty(template)
     silent %delete_
     if template =~# '\t' && !exists('b:sleuth') && exists(':Sleuth') == 2
