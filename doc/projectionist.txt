@@ -98,7 +98,8 @@ The full list of available properties in a projection is as follows:
         projection.  Expansions are shell escaped.
 						*projectionist-template*
 "template" ~
-        Array of lines to use when creating a new file.
+        Array of lines to use when creating a new file or a string with a path
+        to a file containing the template.
 						*projectionist-type*
 "type" ~
         Declares the type of file and create a set of navigation commands for
